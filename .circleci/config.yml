@@ -1,0 +1,13 @@
+version: 2.1
+
+orbs:
+  plantuml: orbss/plantuml@0.4.67
+
+workflows:
+  version: 2
+  generator:
+    jobs:
+      - plantuml/generate-svg:
+          extension: ".uml"
+          persist_to_workspace: false
+          updated_files_only: false
